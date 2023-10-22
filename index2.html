@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agastya</title>
+    <link rel="icon" type="image/x-icon" href="">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Parallax Homepage >> Navbar, Sidebar -->
+<div class="parallax background">
+    <div class="parallax intro">
+
+            <!-- navigation bar => tittle, theme mode toggle, toggle sidebar-->
+            <nav class="navigationBar">
+                <div class="navbar-content">
+                    <ul>
+                        <li><img src="hamburger menu2.png" alt="" style="height: 30px; width: 35px;"></li>
+                    </ul>
+                </div>
+                <div class="navbar-tittle">Agastya.</div>
+            </nav>
+
+            <!-- sidebar => homepage, lifetime, skill, pengalaman, project portfolio -->
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">HOMEPAGE</a></li>
+                    <li><a href="index2.html">PERSONAL DESCRIPTION</a></li>
+                    <li><a href="belajarAjaGaSie.html">PORTFOLIO</a></li>
+                    <li><a href="https://www.linkedin.com/in/andiar-rinanda/">SKILLS AND EXPERIENCE</a></li>
+                    <li><a href="index5.html">ARTICLES</a></li>
+                </ul>
+                <script defer>
+                    // Function to open/close the sidebar
+                    function toggleSidebar() {
+                        const sidebar = document.querySelector('.sidebar');
+                        if (sidebar.style.left === '-250px' || sidebar.style.left === '') {
+                            sidebar.style.left = '0';
+                        } else {
+                            sidebar.style.left = '-250px';
+                        }
+                    }
+                    // Add a click event listener to the hamburger menu icon
+                    const hamburgerMenu = document.querySelector('.navbar-content img');
+                    hamburgerMenu.addEventListener('click', toggleSidebar);
+                </script>
+            </div>
+            
+            <!-- homepage content -->
+            <div class="tittle">
+                <h2 style=" color:white;text-shadow: #9d822b;" >ANDIAR`s PROFILE DESCRIPTION</h2>
+    
+            </div>
+        </div>
+        
+        
+    <!-- Main Content 1 >> Andiar's Lifejourney -->
+    <div class="parallax desc" style="padding-top: 120px;">
+           <div class="andiarJourney">
+            <h2>The Lifejourney of Andiar Rinanda</h2>
+            <p>Andiar Rinanda Agastya, the name my parents gave me 18 years ago. February 12, 2005, the day I was born and the name 
+                "Andiar" was first given to me. My parents said that my name has a good meaning, overall my name has the meaning that 
+                I am a tough and firm person and have high loyalty. That's what I think, I am a disciplined, firm and tough person. 
+                Since I was little, my parents taught me to be independent and never be pampered. In the past, I was annoyed because of 
+                my parents' parenting, but apparently I realized too late. What my parents have taught me has made me a stronger person 
+                in living my life, which is certainly not easy and has many steep paths.</p>
+            <p>I am an intelligent and diligent ITS information systems student. At ITS this is one of the great experiences I have had 
+                in my life. Because of course it is not easy to enter and study at ITS, and it requires a lot of sacrifice and struggle. 
+                That is why I am very proud to gain knowledge and continue learning (even though it is a little difficult) until I can 
+                apply the knowledge I have gained and can make my parents proud, especially my late father.</p>
+            <p>As an Information Systems student, I certainly have an interest and interest in technology and digital fields. 
+                One of them is the field of web programming. This field is the same field that is being pursued to this day. 
+                There are more or less 3 websites that I have worked on, although all three are not perfect and still have many 
+                shortcomings. For me, web programming is my passion which I will continue to pursue in the future. Apart from web 
+                programming, I also have an interest in writing. I have been actively writing articles for both personal and public 
+                purposes since I was in junior high school. Several times I won competitions and championships related to literature 
+                and writing. One of them is that I have won a regency level poetry reading and writing competition, a letter writing 
+                competition for the MENDIKBUD, a literacy competition held by the Library and Archives Service, and many more. Maybe
+                 my ability in literature was inherited from my parents, who were Indonesian language teachers and lecturers.</p>
+            <p>While studying at ITS, I studied a lot again and explored my abilities and interests. And one of the interests 
+                I discovered was robotics. Yes, I am a member of ITS Robotics UKM, as well as serving as Teaching Robotics Staff. 
+                I have also been Staff in the Mechanical and Robot Manufacturing Division in one of the ITS robotics research teams.
+                 Because my specialty is in the mechanical and manufacturing fields, I have been involved a lot in robot design and 
+                 repair. I worked on a lot of robot mechanical design projects, even down to the manufacturing process. Even though 
+                 I am not yet qualified in this field, at least I have mastered the mechanics and manufacturing of a robot.</p>
+            <p>Currently, several of my friends and I are focusing on creating and developing AI and applications. I am a person who likes to innovate and likes to come up with ideas. So I also often win several business plan and business case competitions. This is also one of the interests that I discovered while attending college.</p>
+           
+           </div>
+
+<!-- feedback form -->
+        <div class="parallax feedbackForm"style= "padding-top: 150px;">
+            <h2 style="color: rgb(255, 255, 255); padding-left: 40px; padding-bottom: 30px;text-shadow: 0 0 20px #9d822b;">Send Feedback!</h2>
+            <div class="form-container">
+                <form>
+                    <div class="form-content">
+                        <label for="Nama">Nama: </label>
+                    <input type="text" name="Nama" id="Nama">
+                    </div>
+                    <div class="form-content">
+                        <label for="">Tipe pengunjung: </label>
+                        <select name="tipe-pengunjung" id="tipe-pengunjung">
+                            <option value="Siswa">Siswa</option>
+                            <option value="Mahasiswa">Mahasiswa</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Umum">Umum</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-content">
+                    <label for="text-box">Ask Me:</label><br>
+                    <textarea name="q_data" id="q_data" cols="50" rows="10">Tulis feedback anda di sini :)</textarea>
+                    </div>
+                    <button>Submit</button>                
+                </form>
+            </div>
+        </div>
+    <!-- footer -->
+    <div class=" footer"style= "padding-top: 10px;">    
+    <footer>
+            <div class="footer-content">
+            <ul class="judulFoot">
+                <li>Andiar`s Website Profile</li>
+                <li>A smart and persistent Information System Student</li>
+            </ul>
+            <ul class="infoKontak">
+                <li>Informasi Kontak</li>
+                <li>Email: rynanda1202@gmail.com</li>
+                <li>Telepon: 085708429518</li>
+            </ul>
+            </div>
+    </footer>
+    </div>
+
+</div>
+    
+    
+</body>
+
+</html>

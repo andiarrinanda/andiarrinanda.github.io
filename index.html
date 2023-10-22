@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agastya</title>
+    <link rel="icon" type="image/x-icon" href="">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Homepage >> Navbar, Sidebar -->
+<div class="parallax background">
+    <div class="parallax intro">
+
+            <!-- navigation bar => tittle, theme mode toggle, toggle sidebar-->
+            <nav class="navigationBar">
+                <div class="navbar-content">
+                    <ul>
+                        <li><img src="hamburger menu2.png" alt="" style="height: 30px; width: 35px;"></li>
+                        <li><a href="https://heylink.me/andiar-rinanda/" style="text-decoration: none;">CONTACT ME</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-tittle">Agastya.</div>
+            </nav>
+
+            <!-- sidebar => homepage, lifetime, skill, pengalaman, project portfolio -->
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">HOMEPAGE</a></li>
+                    <li><a href="index2.html">PERSONAL DESCRIPTION</a></li>
+                    <li><a href="belajarAjaGaSie.html">PORTFOLIO</a></li>
+                    <li><a href="https://www.linkedin.com/in/andiar-rinanda/">SKILLS AND EXPERIENCE</a></li>
+                    <li><a href="index5.html">ARTICLES</a></li>
+                </ul>
+                <script defer>
+                    // Function to open/close the sidebar
+                    function toggleSidebar() {
+                        const sidebar = document.querySelector('.sidebar');
+                        if (sidebar.style.left === '-250px' || sidebar.style.left === '') {
+                            sidebar.style.left = '0';
+                        } else {
+                            sidebar.style.left = '-250px';
+                        }
+                    }
+                    // Add a click event listener to the hamburger menu icon
+                    const hamburgerMenu = document.querySelector('.navbar-content img');
+                    hamburgerMenu.addEventListener('click', toggleSidebar);
+                </script>
+            </div>
+            
+            <!-- homepage content -->
+            <div class="formNyapa">
+                <h1 style=" color:white;text-shadow: #9d822b;" >WELCOME TO ANDIAR WEBSITE</h1>
+                <form id="greetingForm" style="text-align: left;border: 2px solid black;padding: 20px;background-color: rgba(255, 255, 255, 0.614); border-radius: 10px;">
+                    <label for="name" style="display: inline-block; font-size: 15px;color: black;">Your Name: </label>
+                    <input type="text" id="name" required style="font-size: 15px;"> 
+                    <br>
+                    <label for="gender" style="display: inline-block; font-size: 15px;color: black;">Gender :</label>
+                    <select id="gender" required style="font-size: 15px;">
+                        <option value="pria">Male</option>
+                        <option value="wanita">Female</option>
+                    </select>
+                    <br>
+                    <button type="button" onclick="showGreeting()" style="font-size: 15px;">Submit</button>
+                </form>
+                <p id="greetingMessage" style="margin-top: 20px; text-align: center; font-size: 20px;"></p>
+            </div>
+            
+            <script defer>
+                function showGreeting() {
+                    const nameInput = document.getElementById('name');
+                    const genderSelect = document.getElementById('gender');
+                    const greetingMessage = document.getElementById('greetingMessage');
+                    const greetingForm = document.getElementById('greetingForm');
+                    
+                    const name = nameInput.value;
+                    const gender = genderSelect.value;
+                    
+                    if (name.trim() === '') {
+                        alert('Please enter your name.');
+                        nameInput.focus();
+                        return;
+                    }
+            
+                    if (!/^[a-zA-Z\s]*$/.test(name)) {
+                        alert('Name should only contain letters and spaces.');
+                        nameInput.focus();
+                        return;
+                    }
+            
+                    let message = `Halo <span style="color: yellow; font-weight: bold">${name}</span>, `;
+                    if (gender === 'pria') {
+                        message += 'ganteng!';
+                    } else if (gender === 'wanita') {
+                        message += 'cantik!';
+                    }
+                    message += ' Semoga harimu menyenangkan ya!';
+                    
+                    greetingMessage.innerHTML = message;
+                    greetingForm.style.display = 'none';
+                }
+            </script>
+            
+        </div>
+        
+        
+    <!-- Main Content 1 >> Andiar's Intro -->
+    <div class="parallax desc" style="padding-top: 120px;">
+            <div class="parallax mainContent1">
+                <h2>Who is Andiar Rinanda?</h2>
+                <div class="deskripsiContent">
+                    <table style="font-family: 'Franklin Gothic'; font-size: 15px;">
+                        <tr>
+                            <td class="d1">I am Andiar Rinanda Agastya <br> Comes from Blitar <br>Born on February 12, 2005</td>
+                            <td class="d2">Smart and persistent Information Systems student<br> from Sepuluh Nopember Institute of Technology.<br> 
+                                Finishing high school within 2 years is proof that I am a <br>tenacious and disciplined fast learner</td>
+                        </tr>    
+                        <tr>
+                        <td class="d3">Having excellent public speaking, communication,<br> writing, teaching, and critical thinking skills and<br>adept at managing organizations.</td>
+                        <td class="d4">Have interests in website development, content and copywriting, robotics, and AI development</td>
+                        </tr>
+                        <tr>
+                        <td class="d5">Dedicated and highly motivated person <br>who believes that: <br> "your path is harder, because your calling is higher"</td>
+                        <td class="d6">Active in organizations since  in junior high school,<br> making me a person who has a leadership spirit</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="imageKu">
+                    <img src="IMG_0374-removebg-preview.png" alt="">
+                </div>
+            </div>
+    </div>
+
+    <!-- Content snippet -->
+        <div class="parallax contentSnip" style="padding-top: 180px;">
+            <h2>Know More About Andiar</h2>
+<style>
+                    /* Content 2 */
+    .mainContent2{
+        padding-top: 100px;
+    }
+    .card-slider-container {
+        overflow: hidden;
+        padding-top: 50px;
+    }
+
+    .card-slider {
+        white-space: nowrap;
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .card {
+        display: inline-block;
+        width: 30%;
+        height: 60%;
+        margin-right: 10px;
+        background-color: #ffffff;
+        text-align: center;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    .card a:hover {
+    text-decoration: none; 
+    color: #244cac; 
+}
+
+.card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card {
+        border: 1px solid #ccc; 
+        border-radius: 5px; 
+        overflow: hidden; 
+        max-width: 300px; 
+        margin: 10px; 
+    }
+    
+    .card a {
+        text-decoration: none;
+        color: #333; 
+        display: block;
+        padding: 10px;
+    }
+    
+    .card img {
+        max-width: 100%;
+        height: auto;
+        display: block; 
+    }
+    
+    .card h3 {
+        font-size: 20px; 
+        margin: 10px 0;
+    }
+    
+    .card p {
+        font-size: 14px;
+        margin: 10px 0;
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
+    }
+</style>
+            
+            <div class="card-slider-container">
+                <div class="card-slider">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <a href="index2.html">
+                            <img src="coversnip1.jpg" alt="Card 1">
+                            <h3>Profile Description</h3>
+                        </a>
+                    </div>
+        
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <a href="belajarAjaGaSie.html">
+                            <img src="csnip2.jpg" alt="Card 2">
+                            <h3>Portfolio</h3>
+                        </a>
+                    </div>
+        
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <a href="https://www.linkedin.com/in/andiar-rinanda/">
+                            <img src="cover3.jpg" alt="Card 3">
+                            <h3>Skills & Experience</h3>
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <a href="index5.html">
+                            <img src="cover4.jpg" alt="Card 3">
+                            <h3>Articles</h3>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="https://heylink.me/andiar-rinanda/">
+                            <img src="cover5.jpg" alt="Card 3">
+                            <h3>Connect With Me!</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- feedback form -->
+        <div class="parallax feedbackForm"style= "padding-top: 150px;">
+            <h2 style="color: rgb(255, 255, 255); padding-left: 40px; padding-bottom: 30px;text-shadow: 0 0 20px #9d822b;">Send Feedback!</h2>
+            <div class="form-container">
+                <form>
+                    <div class="form-content">
+                        <label for="Nama">Nama: </label>
+                    <input type="text" name="Nama" id="Nama">
+                    </div>
+                    <div class="form-content">
+                        <label for="">Tipe pengunjung: </label>
+                        <select name="tipe-pengunjung" id="tipe-pengunjung">
+                            <option value="Siswa">Siswa</option>
+                            <option value="Mahasiswa">Mahasiswa</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Umum">Umum</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-content">
+                    <label for="text-box">Ask Me:</label><br>
+                    <textarea name="q_data" id="q_data" cols="50" rows="10">Tulis feedback anda di sini :)</textarea>
+                    </div>
+                    <button>Submit</button>                
+                </form>
+            </div>
+        </div>
+    <!-- footer -->
+    <div class=" footer"style= "padding-top: 10px;">    
+    <footer>
+            <div class="footer-content">
+            <ul class="judulFoot">
+                <li>Andiar`s Website Profile</li>
+                <li>A smart and persistent Information System Student</li>
+            </ul>
+            <ul class="infoKontak">
+                <li>Informasi Kontak</li>
+                <li>Email: rynanda1202@gmail.com</li>
+                <li>Telepon: 085708429518</li>
+            </ul>
+            </div>
+    </footer>
+    </div>
+
+</div>
+    
+    
+</body>
+
+</html>
